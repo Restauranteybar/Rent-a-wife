@@ -118,11 +118,24 @@
       padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
+      position: relative;
     }
 
     footer a {
       color: #d81b60;
       text-decoration: none;
+    }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-icon img {
+      width: 60px;
+      height: 60px;
     }
   </style>
 </head>
@@ -164,6 +177,11 @@
     <p>&copy; 2025 Benessere Donna. Tutti i diritti riservati.</p>
     <p><a href="#">Privacy Policy</a> | <a href="#">Termini di Servizio</a> | <a href="#">Cookie</a></p>
   </footer>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/393515503904" target="_blank" class="whatsapp-icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
 
 </body>
 </html>
