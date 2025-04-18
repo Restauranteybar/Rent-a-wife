@@ -4,7 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Benessere Donna - Supporto Ginecologico Online</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #e91e63;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      background: url('https://www.vaginaverso.it/wp-content/uploads/2023/05/vaginaverso-tour.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .button {
+      background-color: #c2185b;
+      color: white;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #880e4f;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      color: #e91e63;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      margin-top: 1rem;
+      padding: 12px 24px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #c2185b;
+    }
+
+    .percorsi ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .recensioni blockquote {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-left: 5px solid #e91e63;
+      margin: 1rem 0;
+      font-style: italic;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f8bbd0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #e91e63;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 3rem 1rem;
+      }
+
+      .section {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -13,27 +152,22 @@
     <p>Supporto ginecologico online, ovunque tu sia</p>
   </header>
 
-  <section class="intro">
-    <h2>Hai un dubbio ginecologico?</h2>
-    <p>
-      Rivolgiti a ginecologi esperti comodamente da casa tua. Risposte veloci,
-      professionali e riservate, 24 ore su 24.
-    </p>
-  </section>
+  <div class="hero">
+    <p>Hai un dubbio ginecologico?<br>Rivolgiti a ginecologi esperti comodamente da casa tua.</p>
+    <a href="#contatto" class="button">Contatta il medico ora</a>
+  </div>
 
-  <section class="form-section">
+  <section class="section" id="contatto">
     <h2>Invia la tua domanda</h2>
-    <form>
+    <form action="https://formspree.io/f/xwpldpjr" method="POST">
       <label for="question">Scrivi qui la tua domanda:</label>
       <textarea id="question" name="question" rows="6" required></textarea>
       <button type="submit">Invia</button>
     </form>
-    <p class="privacy">
-      Rispettiamo la tua privacy: la tua domanda sarà trattata in modo totalmente anonimo.
-    </p>
+    <p class="privacy">Rispettiamo la tua privacy: la tua domanda sarà trattata in modo totalmente anonimo.</p>
   </section>
 
-  <section class="percorsi">
+  <section class="section percorsi">
     <h2>I nostri percorsi</h2>
     <ul>
       <li>Contraccezione</li>
@@ -43,36 +177,11 @@
     </ul>
   </section>
 
-  <section class="form-section" style="text-align: center;">
-    <img 
-      src="file-7gvUxsaCZwv3M4fmzuR573" 
-      alt="Video consulto medico" 
-      style="max-width: 100%; border-radius: 12px; margin-bottom: 1rem;"
-    >
-    <p style="font-size: 1.1rem; font-weight: 500;">
-      Utilizza il nostro servizio di videoconsulto e accedi ai nostri percorsi.
-    </p>
+  <section class="section">
+    <img src="https://www.vaginaverso.it/wp-content/uploads/2023/05/vaginaverso-tour.jpg" alt="Video consulto medico" style="max-width:100%; border-radius:12px; margin-bottom:1rem;">
+    <p style="font-size:1.1rem; font-weight:500;">Utilizza il nostro servizio di videoconsulto e accedi ai nostri percorsi.</p>
   </section>
 
-  <section class="recensioni">
-    <h3>Cosa dicono i nostri utenti</h3>
-    <blockquote>
-      "Servizio rapido, preciso e professionale. Lo consiglierò sicuramente!"
-      <br><strong>– Marco R.</strong>
-    </blockquote>
-    <blockquote>
-      "Ho ricevuto una risposta chiara con spiegazioni dettagliate. Grande supporto!"
-      <br><strong>– Giulia T.</strong>
-    </blockquote>
-    <blockquote>
-      "Mi hanno aiutato in piena notte, con competenza e gentilezza. Grazie di cuore."
-      <br><strong>– Alessandra P.</strong>
-    </blockquote>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Benessere Donna. Tutti i diritti riservati.</p>
-  </footer>
-
-</body>
-</html>
+  <section class="section recensioni">
+    <h2>Cosa dicono i nostri utenti</h2>
+    <blockquote>"Servizio rapido1
