@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benessere Donna - Supporto Ginecologico Online</title>
+  <title>Benessere Donna - Videoconsulti Ginecologici</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: #fff0f5;
+      color: #4a0033;
     }
 
     header {
-      background-color: #007bff;
+      background-color: #d81b60;
       padding: 2rem;
       text-align: center;
       color: white;
@@ -21,55 +21,72 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     .hero {
-      background: url('https://www.gvmnet.it/images/hero-banner.jpg') no-repeat center center/cover;
+      background: url('https://img.freepik.com/free-photo/online-doctor-consultation-woman-using-laptop-video-call_23-2149332501.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 5rem 2rem;
+      padding: 6rem 2rem;
+      text-shadow: 1px 1px 4px #000;
     }
 
-    .hero p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .button {
-      background-color: #0056b3;
+      background-color: #ad1457;
       color: white;
       padding: 1rem 2rem;
-      margin-top: 2rem;
       border: none;
-      border-radius: 8px;
-      font-size: 1rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
       text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
+      transition: 0.3s;
     }
 
     .button:hover {
-      background-color: #004080;
+      background-color: #880e4f;
     }
 
     .section {
       max-width: 800px;
       margin: 2rem auto;
       padding: 2rem;
-      background-color: white;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .section h2 {
-      color: #007bff;
+      color: #d81b60;
+    }
+
+    .abbonamento {
+      text-align: center;
+      background-color: #f8bbd0;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .abbonamento h3 {
+      font-size: 1.5rem;
+    }
+
+    .recensioni blockquote {
+      background-color: #ffe4ec;
+      border-left: 5px solid #d81b60;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
     }
 
     form label {
@@ -81,72 +98,31 @@
     form textarea {
       width: 100%;
       padding: 12px;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 1rem;
+      border: 1px solid #ccc;
     }
 
     form button {
       margin-top: 1rem;
-      padding: 12px 24px;
-      background-color: #007bff;
+      background-color: #d81b60;
       color: white;
+      padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
     }
 
-    form button:hover {
-      background-color: #0056b3;
-    }
-
-    .percorsi ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .recensioni blockquote {
-      background: #f9f9f9;
-      padding: 1rem;
-      border-left: 5px solid #007bff;
-      margin: 1rem 0;
-      font-style: italic;
-      border-radius: 8px;
-    }
-
-    .privacy-legal {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-top: 2rem;
-    }
-
     footer {
+      background-color: #fce4ec;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: #e9ecef;
       font-size: 0.9rem;
-      margin-top: 3rem;
     }
 
     footer a {
-      color: #007bff;
+      color: #d81b60;
       text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        padding: 3rem 1rem;
-      }
-
-      .section {
-        padding: 1rem;
-      }
     }
   </style>
 </head>
@@ -154,40 +130,40 @@
 
   <header>
     <h1>Benessere Donna</h1>
-    <p>Supporto ginecologico online, ovunque tu sia</p>
+    <p>Consulti ginecologici online, sempre con te</p>
   </header>
 
-  <div class="hero">
-    <p>Hai un dubbio ginecologico?<br>Rivolgiti alla ginecologa, sempre disponibile per te, comodamente da casa tua.</p>
-    <a href="#contatto" class="button">Contatta il medico ora</a>
-  </div>
-
-  <section class="section" id="contatto">
-    <h2>Invia la tua domanda</h2>
-    <form action="https://formspree.io/f/xwpldpjr" method="POST">
-      <label for="question">Scrivi qui la tua domanda:</label>
-      <textarea id="question" name="question" rows="6" required></textarea>
-      <button type="submit">Invia</button>
-    </form>
-    <p class="privacy-legal"><strong>Attenzione:</strong> Il servizio è disponibile tramite abbonamento mensile e non è anonimo. Le informazioni fornite saranno trattate nel rispetto della normativa sulla privacy (Regolamento UE 2016/679 - GDPR). I tuoi dati personali saranno utilizzati esclusivamente per fornirti il servizio richiesto e non saranno ceduti a terzi.</p>
+  <section class="hero">
+    <h2>Parla subito con una ginecologa</h2>
+    <a href="#abbonamento" class="button">Abbonati Ora</a>
   </section>
 
-  <section class="section percorsi">
-    <h2>I nostri percorsi</h2>
-    <ul>
-      <li>Contraccezione</li>
-      <li>Menopausa</li>
-      <li>Infezioni e disturbi</li>
-      <li>Fertilità</li>
-    </ul>
+  <section class="section abbonamento" id="abbonamento">
+    <h2>Abbonamento Full Time</h2>
+    <p>Accesso illimitato ai videoconsulti</p>
+    <h3>€80 al mese</h3>
+    <a href="https://buy.stripe.com/test_4gw5nD0wfdUQa1C3cc" class="button">Attiva Abbonamento</a>
   </section>
 
   <section class="section">
-    <img src="https://www.gvmnet.it/images/consulto-medico.jpg" alt="Video consulto medico" style="max-width:100%; border-radius:12px; margin-bottom:1rem;">
-    <p style="font-size:1.1rem; font-weight:500;">Utilizza il nostro servizio di videoconsulto e accedi ai nostri percorsi.</p>
+    <h2>Fai la tua domanda</h2>
+    <form action="https://formspree.io/f/xwpldpjr" method="POST">
+      <label for="question">Scrivi la tua domanda:</label>
+      <textarea id="question" name="question" rows="6" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
   </section>
 
-  <section class="section recensioni">
-    <h2>Cosa dicono i nostri utenti</h2>
-    <blockquote>"Servizio rapido, preciso e professionale. Lo consiglierò sicuramente!"<br><strong>– Marco R.</strong></blockquote>
-    <blockquote>"Ho ricevuto una risposta chiara con spiegazioni dettagliate. Grande supporto!"<br><strong4
+  <section class="section">
+    <h2>Recensioni</h2>
+    <blockquote>“Mi sono sentita ascoltata e supportata. Servizio fantastico!”<br><strong>- Chiara L.</strong></blockquote>
+    <blockquote>“Molto professionale, risposte chiare e veloci.”<br><strong>- Serena M.</strong></blockquote>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Benessere Donna. Tutti i diritti riservati.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Termini di Servizio</a> | <a href="#">Cookie</a></p>
+  </footer>
+
+</body>
+</html>
