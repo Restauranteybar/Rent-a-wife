@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Benessere Donna - Consulti Ginecologici Online</title>
+  <title>Consulti Ginecologici - Dott.ssa Ferri</title>
   <style>
     body {
       margin: 0;
@@ -13,18 +13,18 @@
     header {
       background-color: #c2185b;
       color: white;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 30px;
     }
 
     header p {
+      font-size: 20px;
       margin-top: 5px;
-      font-size: 18px;
     }
 
     .hero {
@@ -34,13 +34,13 @@
 
     .hero img {
       width: 100%;
-      max-height: 500px;
+      max-height: 400px;
       object-fit: cover;
     }
 
     .hero-text {
       position: absolute;
-      top: 30%;
+      top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
@@ -48,37 +48,57 @@
     }
 
     .hero-text h2 {
-      font-size: 28px;
+      font-size: 26px;
     }
 
     .hero-text a {
       display: inline-block;
       background-color: #c2185b;
       color: white;
-      padding: 12px 24px;
-      margin-top: 10px;
+      padding: 14px 26px;
+      margin-top: 12px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 18px;
     }
 
     .section {
-      padding: 30px;
+      padding: 35px 20px;
       text-align: center;
     }
 
     .section h2 {
       color: #c2185b;
+      font-size: 24px;
+    }
+
+    .section p, .section h3 {
+      font-size: 20px;
     }
 
     .button {
       display: inline-block;
       background-color: #c2185b;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       text-decoration: none;
-      margin-top: 15px;
-      border-radius: 5px;
+      margin-top: 20px;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      padding: 10px;
     }
 
     .grid {
@@ -93,8 +113,8 @@
       background-color: #fce4ec;
       padding: 20px;
       border-radius: 10px;
-      width: 45%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 500px;
     }
 
     footer {
@@ -102,45 +122,22 @@
       color: white;
       padding: 15px;
       text-align: center;
-      margin-top: 40px;
+      font-size: 16px;
     }
 
     footer a {
       color: white;
+      margin: 0 5px;
       text-decoration: underline;
     }
 
-    textarea, input {
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 8px;
-      margin-top: 5px;
-      margin-bottom: 10px;
-      resize: vertical;
-    }
-
-    .whatsapp-button {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .box {
-        width: 100%;
-      }
-
+    @media (max-width: 600px) {
       .hero-text h2 {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       .hero-text a {
+        font-size: 16px;
         padding: 10px 20px;
       }
     }
@@ -148,7 +145,7 @@
 </head>
 <body>
   <header>
-    <h1>Benessere Donna</h1>
+    <h1>Dott.ssa Ferri</h1>
     <p>Consulti ginecologici online, sempre con te</p>
   </header>
 
@@ -163,7 +160,7 @@
   <div class="section" style="background-color:#fff0f5;">
     <h2>Abbonamento Full Time</h2>
     <p>Accesso illimitato ai videoconsulti</p>
-    <h3 style="font-size: 28px;">€80 al mese</h3>
+    <h3>€80 al mese</h3>
     <a class="button" href="#">Attiva Abbonamento</a>
   </div>
 
@@ -171,35 +168,21 @@
     <div class="grid">
       <div class="box">
         <h3>Fai la tua domanda</h3>
-        <p>Scrivi la tua domanda:</p>
-        <textarea rows="4" placeholder="Scrivi qui la tua domanda..."></textarea>
+        <form action="mailto:ferriam78@gmail.com" method="POST" enctype="text/plain">
+          <p>Scrivi la tua domanda:</p>
+          <textarea name="domanda" required></textarea><br><br>
+          <input type="submit" class="button" value="Invia">
+        </form>
       </div>
       <div class="box">
         <h3>Recensioni</h3>
-        <p><em>“Mi sono sentita ascoltata e supportata. Servizio fantastico.”</em><br>– Chiara L.</p>
-        <p><em>“Professionali e disponibili, consigliatissimo!”</em><br>– Laura M.</p>
+        <p><em>“Mi sono sentita ascoltata e supportata. Servizio fantastico”</em><br>– Chiara L.</p>
       </div>
     </div>
   </div>
 
-  <div class="section" style="background-color:#fff0f5;">
-    <h2>Prenota un consulto</h2>
-    <form action="mailto:info@tuosito.it" method="post" enctype="text/plain">
-      <input type="text" name="Nome" placeholder="Il tuo nome" required>
-      <input type="email" name="Email" placeholder="La tua email" required>
-      <textarea name="Messaggio" rows="4" placeholder="Scrivi la tua richiesta..." required></textarea>
-      <br>
-      <button type="submit" class="button">Invia Richiesta</button>
-    </form>
-    <br>
-    <a class="whatsapp-button" href="https://wa.me/393515503904" target="_blank">Chatta su WhatsApp</a>
-  </div>
-
   <footer>
-    &copy; 2025 Benessere Donna | 
-    <a href="termini.html">Termini</a> | 
-    <a href="privacy.html">Privacy</a> | 
-    <a href="cookie.html">Cookie</a>
+    © 2025 Dott.ssa Ferri | <a href="termini.html">Termini</a> | <a href="privacy.html">Privacy</a> | <a href="cookie.html">Cookie</a>
   </footer>
 </body>
 </html>
