@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Ginecologico</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
@@ -39,12 +42,23 @@
       margin-bottom: 20px;
     }
     .hero a {
-      background-color: #ffffff;
-      color: #f8e1e7;
-      padding: 10px 20px;
+      display: inline-block;
+      background-color: #e91e63;
+      color: #ffffff;
+      padding: 15px 30px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .hero a::before {
+      content: "📅 ";
+      margin-right: 5px;
+    }
+    .hero a:hover {
+      background-color: #c2185b;
     }
     .section {
       padding: 60px 20px;
