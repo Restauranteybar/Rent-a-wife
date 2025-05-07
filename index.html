@@ -94,23 +94,54 @@
       padding: 20px;
       border-radius: 10px;
       width: 45%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     footer {
       background-color: #c2185b;
       color: white;
-      padding: 10px;
+      padding: 15px;
       text-align: center;
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    textarea, input {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      resize: vertical;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
       .box {
         width: 100%;
       }
 
       .hero-text h2 {
-        font-size: 20px;
+        font-size: 22px;
+      }
+
+      .hero-text a {
+        padding: 10px 20px;
       }
     }
   </style>
@@ -141,17 +172,34 @@
       <div class="box">
         <h3>Fai la tua domanda</h3>
         <p>Scrivi la tua domanda:</p>
-        <textarea rows="4" style="width:100%; border:none; border-radius:6px;"></textarea>
+        <textarea rows="4" placeholder="Scrivi qui la tua domanda..."></textarea>
       </div>
       <div class="box">
         <h3>Recensioni</h3>
-        <p><em>“Mi sono sentita ascoltata e supportata. Servizio fantastico”</em><br>– Chiara L.</p>
+        <p><em>“Mi sono sentita ascoltata e supportata. Servizio fantastico.”</em><br>– Chiara L.</p>
+        <p><em>“Professionali e disponibili, consigliatissimo!”</em><br>– Laura M.</p>
       </div>
     </div>
   </div>
 
+  <div class="section" style="background-color:#fff0f5;">
+    <h2>Prenota un consulto</h2>
+    <form action="mailto:info@tuosito.it" method="post" enctype="text/plain">
+      <input type="text" name="Nome" placeholder="Il tuo nome" required>
+      <input type="email" name="Email" placeholder="La tua email" required>
+      <textarea name="Messaggio" rows="4" placeholder="Scrivi la tua richiesta..." required></textarea>
+      <br>
+      <button type="submit" class="button">Invia Richiesta</button>
+    </form>
+    <br>
+    <a class="whatsapp-button" href="https://wa.me/393515503904" target="_blank">Chatta su WhatsApp</a>
+  </div>
+
   <footer>
-    &copy; 2025 Benessere Donna | <a href="termini.html" style="color:white;">Termini</a> | <a href="privacy.html" style="color:white;">Privacy</a> | <a href="cookie.html" style="color:white;">Cookie</a>
+    &copy; 2025 Benessere Donna | 
+    <a href="termini.html">Termini</a> | 
+    <a href="privacy.html">Privacy</a> | 
+    <a href="cookie.html">Cookie</a>
   </footer>
 </body>
 </html>
