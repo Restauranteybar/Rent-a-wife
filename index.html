@@ -130,6 +130,30 @@
       text-decoration: none;
     }
 
+    /* Cookie Banner */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #4a0033;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
+
+    #cookie-banner button {
+      background-color: #d81b60;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     /* Pulsante WhatsApp fisso */
     .whatsapp-fixed {
       position: fixed;
@@ -157,6 +181,20 @@
       transform: scale(1.1);
     }
   </style>
+
+  <script>
+    // Cookie Banner Logic
+    function acceptCookies() {
+      document.getElementById("cookie-banner").style.display = "none";
+      localStorage.setItem("cookieAccepted", "true");
+    }
+
+    window.onload = function () {
+      if (!localStorage.getItem("cookieAccepted")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+    };
+  </script>
 </head>
 <body>
 
@@ -196,8 +234,18 @@
 
   <footer>
     <p>&copy; 2025 Benessere Donna. Tutti i diritti riservati.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Termini di Servizio</a> | <a href="#">Cookie</a></p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="termini.html">Termini di Servizio</a> |
+      <a href="cookie.html">Cookie</a>
+    </p>
   </footer>
+
+  <!-- Banner Cookie -->
+  <div id="cookie-banner" style="display: none;">
+    Questo sito utilizza cookie tecnici e, previo consenso, anche cookie di profilazione per offrirti un'esperienza personalizzata. <a href="cookie.html" style="color:#ffd1dc;">Leggi di più</a>.
+    <button onclick="acceptCookies()">Accetta</button>
+  </div>
 
   <!-- Pulsante WhatsApp fisso -->
   <div class="whatsapp-fixed">
