@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Benessere Donna - Videoconsulti Ginecologici</title>
-
-  <!-- Font Awesome per icona WhatsApp -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -130,31 +128,6 @@
       text-decoration: none;
     }
 
-    /* Cookie Banner */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #4a0033;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      z-index: 1000;
-    }
-
-    #cookie-banner button {
-      background-color: #d81b60;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin-left: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Pulsante WhatsApp fisso */
     .whatsapp-fixed {
       position: fixed;
       bottom: 20px;
@@ -180,21 +153,28 @@
     .whatsapp-fixed a:hover {
       transform: scale(1.1);
     }
-  </style>
 
-  <script>
-    // Cookie Banner Logic
-    function acceptCookies() {
-      document.getElementById("cookie-banner").style.display = "none";
-      localStorage.setItem("cookieAccepted", "true");
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff0f5;
+      padding: 1rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      z-index: 1000;
     }
 
-    window.onload = function () {
-      if (!localStorage.getItem("cookieAccepted")) {
-        document.getElementById("cookie-banner").style.display = "block";
-      }
-    };
-  </script>
+    #cookie-banner button {
+      background-color: #d81b60;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -241,17 +221,18 @@
     </p>
   </footer>
 
-  <!-- Banner Cookie -->
-  <div id="cookie-banner" style="display: none;">
-    Questo sito utilizza cookie tecnici e, previo consenso, anche cookie di profilazione per offrirti un'esperienza personalizzata. <a href="cookie.html" style="color:#ffd1dc;">Leggi di più</a>.
-    <button onclick="acceptCookies()">Accetta</button>
-  </div>
-
   <!-- Pulsante WhatsApp fisso -->
   <div class="whatsapp-fixed">
     <a href="https://wa.me/393515503904" target="_blank" title="Chatta con noi su WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    Questo sito utilizza cookie per migliorare l'esperienza utente. Continuando la navigazione accetti l'uso dei cookie.
+    <a href="cookie.html">Scopri di più</a>
+    <button onclick="document.getElementById('cookie-banner').style.display='none'">Accetta</button>
   </div>
 
 </body>
